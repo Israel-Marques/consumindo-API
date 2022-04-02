@@ -16,26 +16,45 @@
 
 <body>
     <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <h1 class="navbar-brand " id="id-h1">Consulta API</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse w-100 d-flex justify-content-end" id="navbarTogglerDemo02">
+                <a class="nav-link me-4" aria-current="page" href="#">Home</a>
+                <a class="nav-link me-4 " href="#">Link</a>
+            </div>
+        </nav>
 
     </header>
     <main>
-        <div class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="container-fluid d-flex justify-content-center">
             <form class="">
-                <div>
-                    <h2>Busque a roupa do seu interesse</h2>
-                    <input type="text" placeholder="Digite" id="termo">
+                <h2 class="p">Busque o produto de seu interesse</h2>
+                <div class="ms-5 mt-5">
+                    <input class="ms-5" type="text" placeholder="Digite" id="termo">
                     <button id="pesquisa"><span>Pesquise</span></button>
-
                 </div>
+
             </form>
         </div>
-
-        <div  class="d-flex justify-content-center pt-5 mb-5 d-none" id="conteudo">
-            <div class="w-50 " >
+        <div class="d-flex justify-content-center pt-5 mb-5 d-none" id="erro">
+                <div class="w-50 ">
+                    <div class="card w-100" id="conteudo1 ">
+                        <div class="card-body">
+                            <h5 class="card-title">Título do card</h5>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="d-flex justify-content-center pt-5 mb-5 d-none" id="conteudo">
+            <div class="w-50 ">
                 <div class="card w-100" id="conteudo1 ">
                     <div class="card-body">
                         <h5 class="card-title">Título do card</h5>
-                        <p>ID:</p>                      
+                        <p>ID:</p>
                         <div class="w-100 d-flex justify-content-end">
                             <a href="#" class="btn btn-primary text-end ">Comprar</a>
                         </div>
@@ -89,8 +108,9 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="container-fluid d-flex justify-content-center align-items-center posicao" id="footer">
+        <p>&copy; copyright2021</p>
     </footer>
-    <script src="./config.js"></script>
 
+    <script src="./config.js"></script>
 </body>
