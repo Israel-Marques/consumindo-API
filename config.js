@@ -21,13 +21,17 @@ btn.addEventListener("click", (event) => {
   
    fetch(`https://mystique-v2-americanas.juno.b2w.io/autocomplete?content=${termo}&source=nanook`, options)
    .then((response)=>{response.json().then((data) =>{
-    produtos=data.products;
-    removeClass()
-   pegaElementos()
+if(response.status==200){
+  produtos=data.products;
+  removeClass()
+ pegaElementos()
+}else{
+  msgErro.classList.remove('d-none'); 
+}
+ 
   })
    })
    .catch(((erro)=>{console.log("Deu erro:", + erro,message);
-   msgErro.classList.remove('d-none'); 
   })
    )
 });
