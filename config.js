@@ -11,7 +11,7 @@ var msgErro=document.querySelector("#erro")
 
 btn.addEventListener("click", (event) => {
   event.preventDefault();
-  var termo = document.querySelector("#termo").value.split(" ");
+  let termo = document.querySelector("#termo").value.split(" ");
   termo=termo[0]
   const options={
       method:"GET",
