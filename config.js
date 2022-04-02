@@ -27,6 +27,7 @@ if(response.status==200){
  pegaElementos()
 }else{
   msgErro.classList.remove('d-none'); 
+  addClass()
 }
  
   })
@@ -48,4 +49,9 @@ function pegaElementos(){
   function removeClass(){
     produto.classList.remove('d-none');
     footer.classList.remove('posicao');
+  }
+  
+  function addClass(){
+    produto.classList.add('d-none');
+    footer.classList.add('posicao');
   }
