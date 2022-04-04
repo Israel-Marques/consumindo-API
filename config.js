@@ -5,6 +5,7 @@ var arrayP = document.querySelectorAll("p");
 var produtos;
 var footer = document.querySelector("footer");
 var msgErro = document.querySelector("#erro");
+var h3Erro = document.querySelector("#h3-erro");
 
 btn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -28,11 +29,13 @@ btn.addEventListener("click", (event) => {
           msgErro.classList.add("d-none");
         } else {
           msgErro.classList.remove("d-none");
+          addClass()
         }
       });
     })
     .catch((erro) => {
       console.log("Deu erro:", +erro, message);
+      h3Erro.textContent = "Nosso sistema de busca está indisponível, tente  novamente daqui a alguns minutos";
     });
 });
 
