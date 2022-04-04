@@ -17,8 +17,7 @@ btn.addEventListener("click", (event) => {
       method:"GET",
       mode:"cors",
       cache:"default"
-  }
-  
+  }  
    fetch(`https://mystique-v2-americanas.juno.b2w.io/autocomplete?content=${termo}&source=nanook`, options)
    .then((response)=>{response.json().then((data) =>{
 if(response.status==200){
